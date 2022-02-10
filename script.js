@@ -25,18 +25,10 @@ const app = () => {
          if (counter > highscore) {
             document.querySelector('.highscore').textContent = counter
          }
-      } else if (getNumber > secretNumber) {
+
+      } else if (getNumber !== secretNumber) {
          if (counter > 1) {
-            quessMessage.textContent = 'Слишком много!'
-            counter--
-            document.querySelector('.score').textContent = counter
-         } else {
-            quessMessage.textContent = 'Вы проиграли!'
-            document.querySelector('.score').textContent = 0
-         }
-      } else if (getNumber < secretNumber) {
-         if (counter > 1) {
-            quessMessage.textContent = 'Очень мало!'
+            quessMessage.textContent = getNumber > secretNumber ? 'Слишком много' : 'Слишком мало'
             counter--
             document.querySelector('.score').textContent = counter
          } else {
@@ -44,6 +36,25 @@ const app = () => {
             document.querySelector('.score').textContent = 0
          }
       }
+
+      // } else if (getNumber > secretNumber) {
+      //    if (counter > 1) {
+      //       quessMessage.textContent = 'Слишком много!'
+      //       counter--
+      //       document.querySelector('.score').textContent = counter
+      //    } else {
+      //       quessMessage.textContent = 'Вы проиграли!'
+      //       document.querySelector('.score').textContent = 0
+      //    }
+      // } else if (getNumber < secretNumber) {
+      //    if (counter > 1) {
+      //       quessMessage.textContent = 'Очень мало!'
+      //       counter--
+      //       document.querySelector('.score').textContent = counter
+      //    } else {
+      //       quessMessage.textContent = 'Вы проиграли!'
+      //       document.querySelector('.score').textContent = 0
+      //    }
 
 
    })
