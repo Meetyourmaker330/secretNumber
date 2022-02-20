@@ -18,7 +18,7 @@ const app = () => {
          quessMessage.textContent = 'Введите число !'
       } else if (getNumber === secretNumber) {
          quessMessage.textContent = 'Победа !!'
-         question.textContent = secretNumber + 'Ты пидор'
+         question.textContent = `${secretNumber} Победа`
          body.style.background = '#198754'
          document.querySelector('.score').textContent = counter
          document.querySelector('.highscore').textContent = counter
